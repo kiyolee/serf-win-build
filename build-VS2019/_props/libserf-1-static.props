@@ -15,28 +15,28 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;APR_DECLARE_STATIC;APU_DECLARE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OmitDefaultLibName>true</OmitDefaultLibName>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;APR_DECLARE_STATIC;APU_DECLARE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OmitDefaultLibName>true</OmitDefaultLibName>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;APR_DECLARE_STATIC;APU_DECLARE_STATIC;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OmitDefaultLibName>true</OmitDefaultLibName>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;APR_DECLARE_STATIC;APU_DECLARE_STATIC;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OmitDefaultLibName>true</OmitDefaultLibName>
     </ClCompile>
   </ItemDefinitionGroup>
