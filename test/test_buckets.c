@@ -1301,7 +1301,7 @@ static void read_bucket_and_check_pattern(CuTest *tc, serf_bucket_t *bkt,
                                           apr_size_t expected_len)
 {
     apr_status_t status;
-    const char *expected;
+    const char *expected = NULL;
     const apr_size_t pattern_len = strlen(pattern);
 
     apr_size_t exp_rem = 0;

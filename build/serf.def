@@ -1,4 +1,8 @@
 EXPORTS
+serf__bucket_stream_create
+serf__log
+serf__log_nopref
+serf__log_skt
 serf_bmemdup
 serf_bstrcatv
 serf_bstrdup
@@ -127,6 +131,7 @@ serf_request_get_conn
 serf_request_get_pool
 serf_request_is_written
 serf_request_set_handler
+serf_response_full_become_aggregate
 serf_ssl_cert_certificate
 serf_ssl_cert_depth
 serf_ssl_cert_export

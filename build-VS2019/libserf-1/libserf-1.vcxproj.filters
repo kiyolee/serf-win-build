@@ -19,6 +19,9 @@
     <Filter Include="Source Files\buckets">
       <UniqueIdentifier>{8026ecb0-f5da-489d-856e-f61f2d55fb07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\build">
+      <UniqueIdentifier>{3111156d-e80c-4214-a130-bdf6963a1b78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\auth\auth.c">
@@ -110,5 +113,10 @@
     <ResourceCompile Include="..\..\libserf.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\build\serf.def">
+      <Filter>Source Files\build</Filter>
+    </None>
   </ItemGroup>
 </Project>
