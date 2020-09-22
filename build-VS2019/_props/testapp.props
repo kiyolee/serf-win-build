@@ -5,6 +5,9 @@
     <Import Project="win-build.props" />
     <Import Project="apr-1-testapp.props" />
     <Import Project="aprutil-1-testapp.props" />
+    <Import Project="libiconv-testapp.props" />
+    <Import Project="openssl1_1-testapp.props" />
+    <Import Project="zlib-testapp.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
