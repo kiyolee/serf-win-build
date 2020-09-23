@@ -226,10 +226,12 @@ test_helper_run_requests_no_check(CuTest *tc, test_baton_t *tb,
                                   handler_baton_t handler_ctx[],
                                   apr_pool_t *pool);
 void
-test_helper_run_requests_expect_ok(CuTest *tc, test_baton_t *tb,
-                                   int num_requests,
-                                   handler_baton_t handler_ctx[],
-                                   apr_pool_t *pool);
+_test_helper_run_requests_expect_ok(const char *_file, int _line, CuTest* tc, test_baton_t* tb,
+                                    int num_requests,
+                                    handler_baton_t handler_ctx[],
+                                    apr_pool_t* pool);
+#define test_helper_run_requests_expect_ok(tc, tb, num_requests, handler_ctx, pool) \
+     _test_helper_run_requests_expect_ok(__FILE__, __LINE__, (tc), (tb), (num_requests), (handler_ctx), (pool))
 serf_bucket_t* accept_response(serf_request_t *request,
                                serf_bucket_t *stream,
                                void *acceptor_baton,

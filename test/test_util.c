@@ -444,21 +444,21 @@ test_helper_run_requests_no_check(CuTest *tc, test_baton_t *tb,
 }
 
 void
-test_helper_run_requests_expect_ok(CuTest *tc, test_baton_t *tb,
-                                   int num_requests,
-                                   handler_baton_t handler_ctx[],
-                                   apr_pool_t *pool)
+_test_helper_run_requests_expect_ok(const char *_file, int _line, CuTest* tc, test_baton_t* tb,
+                                    int num_requests,
+                                    handler_baton_t handler_ctx[],
+                                    apr_pool_t* pool)
 {
     apr_status_t status;
 
     status = test_helper_run_requests_no_check(tc, tb, num_requests,
                                                handler_ctx, pool);
-    CuAssertIntEquals(tc, APR_SUCCESS, status);
+    CuAssertIntEquals_LineMsg(tc, _file, _line, NULL, APR_SUCCESS, status);
 
     /* Check that all requests were received */
-    CuAssertIntEquals(tc, num_requests, tb->sent_requests->nelts);
-    CuAssertIntEquals(tc, num_requests, tb->accepted_requests->nelts);
-    CuAssertIntEquals(tc, num_requests, tb->handled_requests->nelts);
+    CuAssertIntEquals_LineMsg(tc, _file, _line, NULL, num_requests, tb->sent_requests->nelts);
+    CuAssertIntEquals_LineMsg(tc, _file, _line, NULL, num_requests, tb->accepted_requests->nelts);
+    CuAssertIntEquals_LineMsg(tc, _file, _line, NULL, num_requests, tb->handled_requests->nelts);
 }
 
 serf_bucket_t* accept_response(serf_request_t *request,
