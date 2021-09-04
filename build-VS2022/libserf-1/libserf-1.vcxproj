@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{83B93E77-D6D0-472C-A1C0-26DF168D6F33}</ProjectGuid>
+    <RootNamespace>libserf-1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\_props\libserf-1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\_props\libserf-1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\_props\libserf-1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\_props\libserf-1.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>..\..\build\serf.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(APR_LIB_DIR)libapr-1.dll $(OutDir)
+copy $(APR_LIB_DIR)libapr-1.pdb $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.dll $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.pdb $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>..\..\build\serf.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(APR_LIB_DIR)libapr-1.dll $(OutDir)
+copy $(APR_LIB_DIR)libapr-1.pdb $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.dll $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.pdb $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>..\..\build\serf.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(APR_LIB_DIR)libapr-1.dll $(OutDir)
+copy $(APR_LIB_DIR)libapr-1.pdb $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.dll $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.pdb $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>..\..\build\serf.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(APR_LIB_DIR)libapr-1.dll $(OutDir)
+copy $(APR_LIB_DIR)libapr-1.pdb $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.dll $(OutDir)
+copy $(APU_LIB_DIR)libaprutil-1.pdb $(OutDir)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\auth\auth.c" />
+    <ClCompile Include="..\..\auth\auth_basic.c" />
+    <ClCompile Include="..\..\auth\auth_digest.c" />
+    <ClCompile Include="..\..\auth\auth_spnego.c" />
+    <ClCompile Include="..\..\auth\auth_spnego_sspi.c" />
+    <ClCompile Include="..\..\buckets\aggregate_buckets.c" />
+    <ClCompile Include="..\..\buckets\allocator.c" />
+    <ClCompile Include="..\..\buckets\barrier_buckets.c" />
+    <ClCompile Include="..\..\buckets\buckets.c" />
+    <ClCompile Include="..\..\buckets\bwtp_buckets.c" />
+    <ClCompile Include="..\..\buckets\chunk_buckets.c" />
+    <ClCompile Include="..\..\buckets\dechunk_buckets.c" />
+    <ClCompile Include="..\..\buckets\deflate_buckets.c" />
+    <ClCompile Include="..\..\buckets\file_buckets.c" />
+    <ClCompile Include="..\..\buckets\headers_buckets.c" />
+    <ClCompile Include="..\..\buckets\iovec_buckets.c" />
+    <ClCompile Include="..\..\buckets\limit_buckets.c" />
+    <ClCompile Include="..\..\buckets\mmap_buckets.c" />
+    <ClCompile Include="..\..\buckets\request_buckets.c" />
+    <ClCompile Include="..\..\buckets\response_body_buckets.c" />
+    <ClCompile Include="..\..\buckets\response_buckets.c" />
+    <ClCompile Include="..\..\buckets\simple_buckets.c" />
+    <ClCompile Include="..\..\buckets\socket_buckets.c" />
+    <ClCompile Include="..\..\buckets\ssl_buckets.c" />
+    <ClCompile Include="..\..\context.c" />
+    <ClCompile Include="..\..\incoming.c" />
+    <ClCompile Include="..\..\outgoing.c" />
+    <ClCompile Include="..\..\ssltunnel.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\libserf.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\build\serf.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="AfterClean">
+    <Delete Files="$(OutDir)libapr-1.dll" ContinueOnError="true" />
+    <Delete Files="$(OutDir)libapr-1.pdb" ContinueOnError="true" />
+    <Delete Files="$(OutDir)libaprutil-1.dll" ContinueOnError="true" />
+    <Delete Files="$(OutDir)libaprutil-1.pdb" ContinueOnError="true" />
+  </Target>
+</Project>
