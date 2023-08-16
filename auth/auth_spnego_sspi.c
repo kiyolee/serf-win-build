@@ -144,7 +144,7 @@ serf__spnego_create_sec_context(serf__spnego_context_t **ctx_p,
         sspi_package = "NTLM";
 
     sspi_status = AcquireCredentialsHandleA(
-        NULL, sspi_package, SECPKG_CRED_OUTBOUND,
+        NULL, (LPSTR)sspi_package, SECPKG_CRED_OUTBOUND,
         NULL, NULL, NULL, NULL,
         &ctx->sspi_credentials, NULL);
 
@@ -255,7 +255,7 @@ serf__spnego_init_sec_context(serf_connection_t *conn,
     status = InitializeSecurityContextA(
         &ctx->sspi_credentials,
         ctx->initalized ? &ctx->sspi_context : NULL,
-        ctx->target_name,
+        (SEC_CHAR *)ctx->target_name,
         ISC_REQ_ALLOCATE_MEMORY
         | ISC_REQ_MUTUAL_AUTH
         | ISC_REQ_CONFIDENTIALITY,
