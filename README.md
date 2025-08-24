@@ -2,7 +2,7 @@
 
 Apache serf Windows build with Visual Studio.
 
-This version is serf-1.3.9.
+This version is serf-1.3.10.
 
 To build, simply open the required solution file, and
 you know how to use Visual Studio, right?
