@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="vs_common.props" />
+    <Import Project="win-build.props" />
+    <Import Project="apr-1.props" />
+    <Import Project="aprutil-1.props" />
+    <Import Project="libiconv.props" />
+    <Import Project="openssl3.props" />
+    <Import Project="zlib.props" />
+    <Import Project="expat.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;libserf_1_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;secur32.lib;$(APR_LIB_DIR)libapr-1.lib;$(APU_LIB_DIR)libaprutil-1.lib;$(OPENSSL_LIBS);$(ZLIB_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENSSL_LIB_DIR);$(ZLIB_LIB_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;libserf_1_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;secur32.lib;$(APR_LIB_DIR)libapr-1.lib;$(APU_LIB_DIR)libaprutil-1.lib;$(OPENSSL_LIBS);$(ZLIB_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENSSL_LIB_DIR);$(ZLIB_LIB_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;libserf_1_EXPORTS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;secur32.lib;$(APR_LIB_DIR)libapr-1.lib;$(APU_LIB_DIR)libaprutil-1.lib;$(OPENSSL_LIBS);$(ZLIB_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENSSL_LIB_DIR);$(ZLIB_LIB_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);$(OPENSSL_INC_DIR);$(ZLIB_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;WINNT;WIN32_LEAN_AND_MEAN;NOUSER;NOGDI;NONLS;NOCRYPT;SERF_HAVE_SSPI;libserf_1_EXPORTS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;crypt32.lib;secur32.lib;$(APR_LIB_DIR)libapr-1.lib;$(APU_LIB_DIR)libaprutil-1.lib;$(OPENSSL_LIBS);$(ZLIB_LIBS);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OPENSSL_LIB_DIR);$(ZLIB_LIB_DIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;$(APR_INC_DIR);$(APU_INC_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
